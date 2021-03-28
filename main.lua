@@ -36,7 +36,6 @@ love.update = function (dt)
 -- hur platformen flyttar sig
   if love.keyboard.isDown('right') then
   x = x + 6
-  
 
   elseif love.keyboard.isDown('left') then
     x = x - 6
@@ -89,7 +88,6 @@ love.draw = function ()
 
   love.graphics.circle('fill', b, d, 20)
 
-  love.graphics.setColor(1, 1, 1)
   love.graphics.print(score, 400, 15)
 
 end
