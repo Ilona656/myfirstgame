@@ -13,6 +13,20 @@ gravity = 200
 
 score = 0 
 
+
+function reset()
+  x = 50
+  y = 540
+  w = 130
+  h = 30
+  b = 100
+  d = 100
+  score = 0
+  gravity = 200
+end
+
+reset()
+
 end
 
 
@@ -50,8 +64,9 @@ love.update = function (dt)
     dx = -1
   end
 
+-- börjar om spelet
   if d > 600 then
-    love.event.quit(0)
+    reset()
   end
 
 -- uppdaterar postionen för bollen
