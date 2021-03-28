@@ -11,6 +11,8 @@ dy = 1
 dx = -1
 gravity = 200
 
+score = 0 
+
 end
 
 
@@ -32,9 +34,11 @@ love.update = function (dt)
     dy = -1
     gravity = gravity + 50
     dx = dx * 2
+    score = score + 1
   elseif d < 0 then
     dy = 1
-  end
+ end
+
 
 -- studsa på vänster väg
   if  b < 0 then
@@ -65,7 +69,13 @@ end
 
 
 love.draw = function ()
+
   love.graphics.rectangle('fill', x, y, w, h)
+
   love.graphics.circle('fill', b, d, 20)
+
+  love.graphics.setColor(1, 1, 1)
+  love.graphics.print(score, 400, 15)
+
 end
 
