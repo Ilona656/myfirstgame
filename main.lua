@@ -21,6 +21,10 @@ function reset()
   h = 30
   b = 100
   d = 100
+  
+  bounceFloor = y-10
+  dy = 1
+  dx = -1
   score = 0
   gravity = 200
 end
@@ -88,7 +92,9 @@ love.draw = function ()
 
   love.graphics.circle('fill', b, d, 20)
 
-  love.graphics.print(score, 400, 15)
+  love.graphics.print("SCORE: " ..score, 10, 10)
+
+  love.graphics.print("PONG!", 375, 10)
 
 end
 
