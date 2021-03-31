@@ -1,3 +1,5 @@
-Spelet:
-- En spelare, man ska träffa bollen. Man får inte låte den åka förbi, då förlorar man.
-- Man får poäng för hur många gånger man träffa bollen 
+Pong game:
+
+One player, use keyboard, press 'right' and 'left' to move the platform. The ball have to bounce one the platform, otherwise you lose. The score counts how many times the ball bounce on the platform before you lose. 
+
+
