@@ -98,7 +98,7 @@ love.draw = function ()
 
   love.graphics.rectangle('fill', x, y, w, h)
 
-  love.graphics.circle('fill', b, d, 20)
+  love.graphics.circle('fill', b, d, 15)
 
   love.graphics.print("SCORE: " ..score, 10, 10)
 
