@@ -1,8 +1,12 @@
 love.load = function ()
+
+platform ={}
   x = 50
   y = 540
   w = 130
   h = 30
+
+Ball = {}
   b = 100
   d = 100
 
@@ -10,18 +14,21 @@ bounceFloor = y-10
 dy = 1
 dx = -1
 gravity = 200
-
 score = 0 
 
 
 function reset()
+
+Platform = {}
   x = 50
-  y = 540
-  w = 130
-  h = 30
+  y = 550
+  w = 80
+  h = 10
+
+Ball = {}
   b = 100
   d = 100
-  
+
   bounceFloor = y-10
   dy = 1
   dx = -1
@@ -35,18 +42,19 @@ end
 
 
 
+
 love.update = function (dt)
 
 -- hur platformen flyttar sig
   if love.keyboard.isDown('right') then
-  x = x + 6
+  x = x + 7
 
   elseif love.keyboard.isDown('left') then
-    x = x - 6
+    x = x - 7
   end
 
 
--- studsa på platan 
+-- studsa på platan
   if d > bounceFloor and b > x and b < (x + 80) then
     dy = -1
     gravity = gravity + 50
